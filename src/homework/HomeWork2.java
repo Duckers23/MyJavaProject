@@ -55,14 +55,18 @@ public class HomeWork2 {
                 "In it, we just need to determine how many times the character 'a' occurs there. " +
                 "And we can use the split method and the length method.";
         String bottomRegisterText = randomText.toLowerCase();
+        System.out.println(bottomRegisterText.split("a").length);
         System.out.println(bottomRegisterText.split("a").length - 1);
         // эксперементальный метод проб и ошибок))) надеюсь оцените шутку и потраченное время
-//        System.out.println(randomText.toLowerCase().split("a").length);
-//        String subStringString = randomText.substring(0, 12) + randomText.substring(13, 73) + randomText.substring(74, 89) +
-//                randomText.substring(90, 91) + randomText.substring(92, 98) + randomText.substring(99, 115)
-//                + randomText.substring(116, 123) + randomText.substring(124, 147)
-//                + randomText.substring(148, 169);
-//        System.out.println(randomText.length() - subStringString.length());
+        System.out.println("=========================");
+        System.out.println(randomText.toLowerCase().split("a").length);
+        String subStringString = randomText.substring(0, 12) + randomText.substring(13, 73) + randomText.substring(74, 89) +
+                randomText.substring(90, 91) + randomText.substring(92, 98) + randomText.substring(99, 115)
+                + randomText.substring(116, 123) + randomText.substring(124, 147)
+                + randomText.substring(148, 169);
+        System.out.println(randomText.length());
+        System.out.println(subStringString.length());
+        System.out.println(randomText.length() - subStringString.length());
 
 
 
