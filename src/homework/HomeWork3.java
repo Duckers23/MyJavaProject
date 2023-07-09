@@ -83,25 +83,19 @@ public class HomeWork3 {
 //        числа и символ - или + или % или / или *. На экран выводится резултат действия над двумя введенными числами.
 //                Если пользователь ввел что-то кроме данных символов, то необходимо вывести 0.
 
-//        Scanner theScanner3 = new Scanner(System.in);
-//        System.out.println("Введите первое число");
-//        int number1 = theScanner3.nextInt();
-//        System.out.println("Введите второе число");
-//        int number2 = theScanner3.nextInt();
-//        System.out.println("Введите символ");
-//        String symbol = theScanner3.nextLine();
-//        String symbol1 = "+";
-//        String symbol2 = "%";
-//        String symbol3 = "/";
-//        String symbol4 = "*";
-//        int first = (number1 + number2);
-//        int second = (number1 % number2);
-//        int third = (number1 / number2);
-//        int forth = (number1 * number2);
-//        int zero = 0;
-//        int result = symbol1.equals(symbol1) ? first : symbol2.equals(symbol2) ? second :
-//                symbol3.equals(symbol3) ? third : symbol4.equals(symbol4) ? forth : zero;
-//        System.out.println(result); ?????????????????????????????????????????????
+        Scanner theScanner3 = new Scanner(System.in);
+        System.out.println("Введите первое число");
+        int number1 = theScanner3.nextInt();
+        System.out.println("Введите второе число");
+        int number2 = theScanner3.nextInt();
+        System.out.println("Введите символ");
+        String symbol = theScanner3.next();
+        int result = symbol.equals("+") ? (number1 + number2) :
+                symbol.equals("%") ? (number1 % number2) :
+                symbol.equals("/") ? (number1 / number2) :
+                        symbol.equals("*") ? (number1 * number2) :
+                        symbol.equals("-") ? (number1 - number2) : 0;
+        System.out.println(result);
 
         //#6 Используя оператор switch написать программу, которая выводит на консоль ссылку
         //для скачивания программы. Из выбора программ взять: IntelliJ IDEA, Git, Java.
@@ -111,67 +105,67 @@ public class HomeWork3 {
         //что такой программы не существует. Если указанной пользователем ОС нет, то выводится сообщение в консоль,
         //о том что такой ОС не существует.
 
-        Scanner theScanner4 = new Scanner(System.in);
-        System.out.println("Какую программу вы хотите скачать?");
-        String programs = theScanner4.nextLine();
-
-
-        switch (programs.toLowerCase().trim()) {
-            case ("intellij idea"):
-                System.out.println("Какую ОС вы используете?");
-                String OC1 = theScanner4.nextLine();
-                switch (OC1.toLowerCase().trim()) {
-                    case ("linux"):
-                        System.out.println("https://www.jetbrains.com/idea/download/?fromIDE=&section=linux");
-                        break;
-                    case ("macos"):
-                        System.out.println("https://www.jetbrains.com/idea/download/?fromIDE=&section=mac");
-                        break;
-                    case ("windows"):
-                        System.out.println("https://www.jetbrains.com/idea/download/?fromIDE=&section=windows");
-                        break;
-                    default:
-                        System.out.println("Нет такой ОС");
-                }
-                break;
-            case ("git"):
-                System.out.println("Какую ОС вы используете?");
-                String oc2 = theScanner4.nextLine();
-                switch (oc2.toLowerCase().trim()) {
-                    case ("linux"):
-                        System.out.println("https://gitforlinux.org/");
-                        break;
-                    case ("macos"):
-                        System.out.println("https://gitformacOs.org/");
-                        break;
-                    case ("windows"):
-                        System.out.println("https://gitforwindows.org/");
-                        break;
-                    default:
-                        System.out.println("Нет такой ОС");
-                }
-                break;
-            case ("java"):
-                System.out.println("Какую ОС вы используете?");
-                String oc3 = theScanner4.nextLine();
-                switch (oc3.toLowerCase().trim()) {
-                    case ("linux"):
-                        System.out.println("https://www.java.com/en/download/for/linux");
-                        break;
-                    case ("windows"):
-                        System.out.println("https://www.java.com/en/download/for/windows");
-                        break;
-                    case ("macos"):
-                        System.out.println("https://www.java.com/en/download/for/macOs");
-                        break;
-                    default:
-                        System.out.println("Нет такой ОС");
-                }
-                break;
-            default:
-                System.out.println("нет такой программы");
-
-        }
+//        Scanner theScanner4 = new Scanner(System.in);
+//        System.out.println("Какую программу вы хотите скачать?");
+//        String programs = theScanner4.nextLine();
+//
+//
+//        switch (programs.toLowerCase().trim()) {
+//            case ("intellij idea"):
+//                System.out.println("Какую ОС вы используете?");
+//                String OC1 = theScanner4.nextLine();
+//                switch (OC1.toLowerCase().trim()) {
+//                    case ("linux"):
+//                        System.out.println("https://www.jetbrains.com/idea/download/?fromIDE=&section=linux");
+//                        break;
+//                    case ("macos"):
+//                        System.out.println("https://www.jetbrains.com/idea/download/?fromIDE=&section=mac");
+//                        break;
+//                    case ("windows"):
+//                        System.out.println("https://www.jetbrains.com/idea/download/?fromIDE=&section=windows");
+//                        break;
+//                    default:
+//                        System.out.println("Нет такой ОС");
+//                }
+//                break;
+//            case ("git"):
+//                System.out.println("Какую ОС вы используете?");
+//                String oc2 = theScanner4.nextLine();
+//                switch (oc2.toLowerCase().trim()) {
+//                    case ("linux"):
+//                        System.out.println("https://gitforlinux.org/");
+//                        break;
+//                    case ("macos"):
+//                        System.out.println("https://gitformacOs.org/");
+//                        break;
+//                    case ("windows"):
+//                        System.out.println("https://gitforwindows.org/");
+//                        break;
+//                    default:
+//                        System.out.println("Нет такой ОС");
+//                }
+//                break;
+//            case ("java"):
+//                System.out.println("Какую ОС вы используете?");
+//                String oc3 = theScanner4.nextLine();
+//                switch (oc3.toLowerCase().trim()) {
+//                    case ("linux"):
+//                        System.out.println("https://www.java.com/en/download/for/linux");
+//                        break;
+//                    case ("windows"):
+//                        System.out.println("https://www.java.com/en/download/for/windows");
+//                        break;
+//                    case ("macos"):
+//                        System.out.println("https://www.java.com/en/download/for/macOs");
+//                        break;
+//                    default:
+//                        System.out.println("Нет такой ОС");
+//                }
+//                break;
+//            default:
+//                System.out.println("нет такой программы");
+//
+//        }
 
 
     }
