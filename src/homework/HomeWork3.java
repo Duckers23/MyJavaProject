@@ -82,15 +82,16 @@ public class HomeWork3 {
 //        #5 Написать программу, используя тернарный оператор, где пользователь вводит с клавиатуры два
 //        числа и символ - или + или % или / или *. На экран выводится резултат действия над двумя введенными числами.
 //                Если пользователь ввел что-то кроме данных символов, то необходимо вывести 0.
+        // GOTOVO
 
         Scanner theScanner3 = new Scanner(System.in);
         System.out.println("Введите первое число");
-        int number1 = theScanner3.nextInt();
+        double number1 = theScanner3.nextDouble();
         System.out.println("Введите второе число");
-        int number2 = theScanner3.nextInt();
+        double number2 = theScanner3.nextDouble();
         System.out.println("Введите символ");
         String symbol = theScanner3.next();
-        int result = symbol.equals("+") ? (number1 + number2) :
+        double result = symbol.equals("+") ? (number1 + number2) :
                 symbol.equals("%") ? (number1 % number2) :
                 symbol.equals("/") ? (number1 / number2) :
                         symbol.equals("*") ? (number1 * number2) :
